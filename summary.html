@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Budget</title>
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Shared Budget</h1>
+
+      <nav>
+
+        <menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="submit-expense.html">Submit Expense</a></li>
+          <li><a href="summary.html">Spending Summary</a></li>
+          <li><a href="about.html">About</a></li>
+        </menu>
+      </nav>
+
+      <hr />
+    </header>
+
+    <main>
+      <h2>Spending Summary</h2>
+      <p>Total Spent: $1234.56</p>
+      <meter value="600" min="0" max="2000"></meter>
+      <br /><br />
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Spent</th>
+            <th></th>
+          </tr>
+          <tr>
+            <!-- each category can eventually be a link to see individual expense details -->
+            <td>Food</td>
+            <td>$456.78</td>
+            <td><meter value="100" min="0" max="200"></meter></td>
+          </tr>
+          <tr>
+            <td>Transportation</td>
+            <td>$123.45</td>
+            <td><meter value="50" min="0" max="100"></meter></td>
+          </tr>
+          <tr>
+            <td>Utilities</td>
+            <td>$234.56</td>
+            <td><meter value="75" min="0" max="150"></meter></td>
+          </tr>
+          <tr>
+            <td>Entertainment</td>
+            <td>$89.01</td>
+            <td><meter value="30" min="0" max="100"></meter></td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>$330.76</td>
+            <td><meter value="80" min="0" max="200"></meter></td>
+        </thead>
+      </table>
+
+      <br /><br />
+      <section>
+        <button>Export as CSV</button>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <span>Brandon Lewis</span>
+      <br />
+      <a href="https://github.com/blew22/startup">GitHub</a>
+    </footer>
+  </body>
+</html>
