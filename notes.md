@@ -1,22 +1,35 @@
 # CS 260 Notes
 
-[My startup - Simon](https://simon.cs260.click)
+[My startup - Shared Budget](https://sharedbudget.click)
 
 ## Helpful links
 
 - [Course instruction](https://github.com/webprogramming260)
-- [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
 ## AWS
 
-My IP address is: 98.87.184.136
+My Elastic IP address is: 98.87.184.136
 Web server is an EC2 instance using the class's AMI.
 I've allocated an elastic IP to the instance so that the IP will stay the same even if I shutdown or restart the server.
 
+Use the following to ssh into server: 
+```
+➜  ssh -i [key pair file location] ubuntu@[ip address]
+```
+
+Register a domain name through AWS Route 53. The .click TLD (top-level domain) costs $3/yr in Oct 2025. Go to `hosted zones > create records` to create records that tie your server's IP to the domain name.
+
 ## Caddy
 
-No problems worked just like it said in the [instruction](https://github.com/webprogramming260/.github/blob/main/profile/webServers/https/https.md).
+### Learned to edit files from CL:
+
+    vi filename
+- **Entering Text:** Switch to insert mode by pressing `ins`, `i`, `a`, or `o`. Type your text.
+- **Exiting Insert Mode:** Press the `Esc` key to return to command mode.
+- **Saving and Exiting:** In command mode, type `:wq` and press Enter to save changes and quit.
+
+### Edited Caddy config file
 
 ## HTML
 
