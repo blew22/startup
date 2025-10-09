@@ -33,15 +33,69 @@ Register a domain name through AWS Route 53. The .click TLD (top-level domain) c
 
 ## HTML
 
-This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
+Command to deploy files to server:
+```bash
+./deployFiles.sh -k [keyFileLocation] -h sharedbudget.click -s simon
+```
 
-The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React.
+I still don't quite get how form subissions and adding button functions works, but I guess we'll get there.
 
 ## CSS
 
-This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
+All IDs in an html doc should be unique. So, making a CSS rule by ID should affect a specific element.
 
-Bootstrap seems a bit like magic. It styles things nicely, but is very opinionated. You either do, or you do not. There doesn't seem to be much in between.
+| Combinator       | Meaning                    | Example        | Description                                |
+| ---------------- | -------------------------- | -------------- | ------------------------------------------ |
+| Descendant       | A list of descendants      | `body section` | Any section that is a descendant of a body |
+| Child            | A list of direct children  | `section > p`  | Any p that is a direct child of a section  |
+| General sibling  | A list of siblings         | `div ~ p`      | Any p that has a div sibling               |
+| Adjacent sibling | A list of adjacent sibling | `div + p`      | Any p that has an adjacent div sibling     |
+
+### Animations
+Define `animation-name` and `animation-duration` properties for the element that you want to animate. Then, use `@keyframe` to give start and end keyframes as well as optional keyframes in the middle.
+```
+@keyframes [animation-name] {
+  from {
+    [starting style/position]
+  }
+  50% {
+    [intermediate style/position]
+  }
+  to {
+    [ending style/position]
+  }
+}
+```
+
+
+### Responsive design
+Mobile browsers scale websites automatically to work on a small screen. You need to override this if you want control of your website's responsive design.
+```
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+```
+
+change or remove elements when the screen height is greater than width
+```@media (orientation: portrait) {
+  aside {
+    display: none;
+  }
+}
+```
+
+CSS `display` property value options: `none`, `block` (default of p and div), `inline` (default of b and span), `flex`, `grid`
+
+#### grids
+"We turn a series of elements into a responsive grid by including a CSS `display` property with the value of `grid` on the container element. This tells the browser that all of the children of this element are to be displayed in a grid flow. The `grid-template-columns` property specifies the layout of the grid columns. We set this to repeatedly define each column to auto-fill the parent element's width with children that are resized to a minimum of 300 pixels and a maximum of one equal fractional unit (`1fr`) of the parents total width. A fractional unit is dynamically computed by splitting up the parent element's width into equal parts. Next, we fix the height of the rows to be exactly 300 pixels by specifying the `grid-auto-rows` property. Finally, we finish off the grid configuration by setting the `grid-gap` property to have a gap of at least 1 em between each grid item."
+
+```
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 1em;
+}
+```
+
 
 I did like the navbar it made it super easy to build a responsive header.
 
