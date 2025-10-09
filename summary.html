@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shared Budget</title>
     <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
-      <h1>Shared Budget</h1>
+      <h1 class="logo">Shared Budget</h1>
 
-      <nav>
+      <nav class="navigation">
 
-        <menu>
+        <menu class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="submit-expense.html">Submit Expense</a></li>
           <li><a href="summary.html">Spending Summary</a></li>
@@ -24,10 +25,12 @@
     </header>
 
     <main>
+      <div class="summary-card">
       <h2>Spending Summary</h2>
       <p>Total Spent: $1234.56</p>
       <meter value="600" min="0" max="2000"></meter>
-      <br /><br />
+      
+      
       <table>
         <thead>
           <tr>
@@ -67,6 +70,7 @@
       <section>
         <button>Export as CSV</button>
       </section>
+      </div>
     </main>
 
     <footer>

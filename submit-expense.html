@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shared Budget</title>
     <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
-      <h1>Shared Budget</h1>
+      <h1 class="logo">Shared Budget</h1>
 
-      <nav>
+      <nav class="navigation">
 
-        <menu>
+        <menu class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="submit-expense.html">Submit Expense</a></li>
           <li><a href="summary.html">Spending Summary</a></li>
@@ -23,21 +24,22 @@
       <hr />
     </header>
 
-    <main>
-      <div class="players">
-        Submitting as: 
-        <span class="player-name">Current User</span>
-      </div>
-      <ul class="notification">
-        <li class="player-name">Elise logged in</li>
-        <li class="player-name">Elise submitted an expense</li>
-        <li class="player-name">Tim scored 337</li>
-      </ul>
+    <div class="websocketbox">
 
+      <ul class="websocketalert">
+        <li class="player-name">Elise logged in</li>
+      </ul> 
+    </div>
+
+    <main>
       <!-- More formatting with old style HTML -->
       <br />
 
       <form action="submit-expense.html" method="post">
+        <div class="players">
+          Submitting as: 
+          <span class="player-name">Current User</span>
+        </div>
         <input type="date">
         <input type="number" placeholder="Amount">
         <input type="text" placeholder="Description">

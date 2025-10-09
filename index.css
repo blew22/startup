@@ -84,6 +84,22 @@ form {
   gap: 1rem;
 }
 
+.summary-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 form div {
   display: flex;
   flex-direction: column;
@@ -144,6 +160,30 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.websocketbox {
+  position:absolute;
+  top: 6rem;
+  left: 1rem;
+  padding: .25rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  background: var(--card-bg);
+  animation-name: fade-away;
+  animation-duration: 5s;
+}
+
+@keyframes fade-away {
+  0% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0; display: none;}
+}
+
+ul.websocketalert {
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.336);
 }
 
 @media (max-width: 600px) {
